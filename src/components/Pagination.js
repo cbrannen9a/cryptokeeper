@@ -5,12 +5,12 @@ import TablePagination from '@material-ui/core/TablePagination';
 
 
 const Pagination = (props) => {
-	const { totalPages, page, rowsPerPage, handlePaginationClick } = props;
+	const { totalItems, page, rowsPerPage, handlePaginationClick } = props;
 
 	return (
 		<TablePagination
 			component='div'
-			count={totalPages}
+			count={totalItems}
 			rowsPerPage={rowsPerPage}
 			page={page}
 			backIconButtonProps={{
@@ -26,7 +26,7 @@ const Pagination = (props) => {
 }
 
 Pagination.propTypes = {
-	totalPages: PropTypes.number.isRequired,
+	totalItems: PropTypes.number.isRequired,
 	page: PropTypes.number.isRequired,
 	rowsPerPage: PropTypes.number.isRequired,
 	handlePaginationClick: PropTypes.func.isRequired,
