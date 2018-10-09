@@ -1,14 +1,11 @@
 {
-  "main.css": "/cryptokeeper/static/css/main.af4d6cfd.chunk.css",
-  "main.js": "/cryptokeeper/static/js/main.c02b605b.chunk.js",
-  "main.js.map": "/cryptokeeper/static/js/main.c02b605b.chunk.js.map",
-  "static/js/1.6105a37c.chunk.js": "/cryptokeeper/static/js/1.6105a37c.chunk.js",
-  "static/js/1.6105a37c.chunk.js.map": "/cryptokeeper/static/js/1.6105a37c.chunk.js.map",
+  "main.js": "/cryptokeeper/static/js/main.302fe979.chunk.js",
+  "main.js.map": "/cryptokeeper/static/js/main.302fe979.chunk.js.map",
+  "static/js/1.1533f9b7.chunk.js": "/cryptokeeper/static/js/1.1533f9b7.chunk.js",
+  "static/js/1.1533f9b7.chunk.js.map": "/cryptokeeper/static/js/1.1533f9b7.chunk.js.map",
   "runtime~main.js": "/cryptokeeper/static/js/runtime~main.0fcb3791.js",
   "runtime~main.js.map": "/cryptokeeper/static/js/runtime~main.0fcb3791.js.map",
-  "static/media/logo.svg": "/cryptokeeper/static/media/logo.5d5d9eef.svg",
-  "static/css/main.af4d6cfd.chunk.css.map": "/cryptokeeper/static/css/main.af4d6cfd.chunk.css.map",
   "index.html": "/cryptokeeper/index.html",
-  "precache-manifest.3eedceb448afa264d7a0c6987834b3fd.js": "/cryptokeeper/precache-manifest.3eedceb448afa264d7a0c6987834b3fd.js",
+  "precache-manifest.24e5446e8017aac35003eda0e7856727.js": "/cryptokeeper/precache-manifest.24e5446e8017aac35003eda0e7856727.js",
   "service-worker.js": "/cryptokeeper/service-worker.js"
 }
