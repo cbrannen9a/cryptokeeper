@@ -11,7 +11,7 @@ class List extends React.Component {
 
 		this.state = {
 			page: 1,
-			totalPages: 0,
+			totalPages: 1,
 			// NOTE: Don't set it greater than 50, because maximum perPage for API is 50
 			perPage: 5,
 			currencies: [],
@@ -74,12 +74,12 @@ class List extends React.Component {
 
 		// Render only loading component, if it's set to true
 		if (loading) {
-			return <div className="loading-container"><Loading /></div>
+			return <div className='loading-container'><Loading /></div>
 		}
 
 		// Render only error message, if error occured while fetching data
 		if (error) {
-			return <div className="error">{error}</div>
+			return <div className='error'>{error}</div>
 		}
 
 		return (

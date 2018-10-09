@@ -14,8 +14,8 @@ class App extends Component {
 					<Header />
 
 					<Switch>
-						<Route exact path="/" component={List} />
-						<Route exact path="/currency/:id" component={Detail} />
+						<Route exact path='/' component={List} />
+						<Route exact path='/currency/:id' component={Detail} />
 						<Route component={NotFound} />
 					</Switch>
 				</div>

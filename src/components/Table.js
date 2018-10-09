@@ -56,7 +56,7 @@ const CurrencyTable = (props) => {
 							key={currency.id}
 							onClick={() => history.push(`/currency/${currency.id}`)}
 						>
-							<TableCell component="th" scope="row">
+							<TableCell component='th' scope='row'>
 								{currency.name}
 							</TableCell>
 							<TableCell>{currency.rank}</TableCell>
