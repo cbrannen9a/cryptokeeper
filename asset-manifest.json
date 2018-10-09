@@ -1,11 +1,11 @@
 {
-  "main.js": "/cryptokeeper/static/js/main.97de8aea.chunk.js",
-  "main.js.map": "/cryptokeeper/static/js/main.97de8aea.chunk.js.map",
+  "main.js": "/cryptokeeper/static/js/main.24606e3b.chunk.js",
+  "main.js.map": "/cryptokeeper/static/js/main.24606e3b.chunk.js.map",
   "static/js/1.fabbf145.chunk.js": "/cryptokeeper/static/js/1.fabbf145.chunk.js",
   "static/js/1.fabbf145.chunk.js.map": "/cryptokeeper/static/js/1.fabbf145.chunk.js.map",
   "runtime~main.js": "/cryptokeeper/static/js/runtime~main.0fcb3791.js",
   "runtime~main.js.map": "/cryptokeeper/static/js/runtime~main.0fcb3791.js.map",
   "index.html": "/cryptokeeper/index.html",
-  "precache-manifest.129279d3e481eb002d00bc17a9224479.js": "/cryptokeeper/precache-manifest.129279d3e481eb002d00bc17a9224479.js",
+  "precache-manifest.7b08cb6c0d87d7cde5c3f5098f5c5558.js": "/cryptokeeper/precache-manifest.7b08cb6c0d87d7cde5c3f5098f5c5558.js",
   "service-worker.js": "/cryptokeeper/service-worker.js"
 }

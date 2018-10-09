@@ -4,15 +4,15 @@ self.__precacheManifest = [
     "url": "/cryptokeeper/static/js/runtime~main.0fcb3791.js"
   },
   {
-    "revision": "97de8aea3992c43b1123",
-    "url": "/cryptokeeper/static/js/main.97de8aea.chunk.js"
+    "revision": "24606e3ba5bc781a9afa",
+    "url": "/cryptokeeper/static/js/main.24606e3b.chunk.js"
   },
   {
     "revision": "fabbf14594dd47779a2b",
     "url": "/cryptokeeper/static/js/1.fabbf145.chunk.js"
   },
   {
-    "revision": "35e357341b852dc9c2d7701280f2f664",
+    "revision": "d365bd0dfc79744ca786022441f9d337",
     "url": "/cryptokeeper/index.html"
   }
 ];
