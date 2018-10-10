@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/cryptokeeper/precache-manifest.53bc8b2eeba1ef9340e8510e6025443e.js"
+  "/cryptokeeper/precache-manifest.a7282ac42312dd0ed698022ce8a1b1f0.js"
 );
 
 workbox.clientsClaim();
