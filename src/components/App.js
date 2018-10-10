@@ -17,9 +17,9 @@ class App extends Component {
 
 					<Switch>
 						<Route exact path={routes.HOME} component={List} />
-						<Redirect from={routes.BASE} to={routes.HOME} />
 						<Route exact path={routes.DETAIL} component={Detail} />
 						<Route component={NotFound} />
+						<Redirect from={routes.BASE} to={routes.HOME} />
 					</Switch>
 				</div>
 			</BrowserRouter>
