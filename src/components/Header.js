@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 
 import { withStyles } from '@material-ui/core/styles';
 import { fade } from '@material-ui/core/styles/colorManipulator';
@@ -10,6 +11,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
 import SearchIcon from '@material-ui/icons/Search';
+import { routes } from '../constants/routes';
 
 const styles = theme => ({
 	flex: {
@@ -59,12 +61,12 @@ const styles = theme => ({
 
 class Header extends Component {
 	render() {
-		const { classes } = this.props;
+		const { classes, history } = this.props;
 
 		return (
 			<AppBar position='static' color='primary'>
 				<Toolbar>
-					<Typography variant='h5' className={classes.flex} >
+					<Typography variant='h5' className={classes.flex} onClick={() => history.push(routes.HOME)} >
 						Cryptokeeper
 					</Typography>
 					<div className={classes.search}>
@@ -80,7 +82,7 @@ class Header extends Component {
 						/>
 					</div>
 				</Toolbar>
-			</AppBar>
+			</AppBar >
 		);
 	}
 }
@@ -90,4 +92,4 @@ Header.propTypes = {
 };
 
 
-export default withStyles(styles)(Header);
+export default withStyles(styles)(withRouter(Header));
