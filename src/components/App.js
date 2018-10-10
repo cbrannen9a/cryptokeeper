@@ -9,7 +9,7 @@ import NotFound from './NotFound';
 import { routes } from '../constants/routes';
 
 class App extends Component {
-	render() {
+	render = () => {
 		return (
 			<BrowserRouter>
 				<div>

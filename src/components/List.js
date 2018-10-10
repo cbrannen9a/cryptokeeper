@@ -4,16 +4,14 @@ import Pagination from './Pagination';
 import Loading from './Loading';
 import Table from './Table';
 
-import { getCurrencies } from '../actions';
+import { getCurrencies, getAllCurrencies } from '../actions';
 
 class List extends React.Component {
 	constructor() {
 		super();
 
 		this.state = {
-			page: 1,
-			totalPages: 0,
-			// NOTE: Don't set it greater than 50, because maximum perPage for API is 50
+			page: 0,
 			perPage: 5,
 			currencies: [],
 			loading: false,
@@ -21,16 +19,17 @@ class List extends React.Component {
 		};
 
 		this.handlePaginationClick = this.handlePaginationClick.bind(this);
+		this.handleChangeRowsPerPage = this.handleChangeRowsPerPage.bind(this);
 	}
 
-	componentWillMount() {
+	componentWillMount = () => {
 		this.fetchCurrencies();
 	}
 
-	fetchCurrencies() {
+	fetchCurrencies = () => {
 		this.setState({ loading: true });
 
-		const rows = getCurrencies();
+		const rows = getCurrencies(this.state.page, this.state.perPage);
 
 		this.setState({
 			currencies: rows,
@@ -39,25 +38,26 @@ class List extends React.Component {
 
 	}
 
-	handlePaginationClick(direction) {
-		let nextPage = this.state.page;
-
-		// Increment nextPage if direction variable is next, otherwise decrement it
-		nextPage = direction === 'next' ? nextPage + 1 : nextPage - 1;
-
-		// Call fetchCurrencies function inside setState's callback
-		// Because we have to make sure first page state is updated
-		this.setState({ page: nextPage }, () => {
-			this.fetchCurrencies();
+	handlePaginationClick = (e, page) => {
+		this.setState({
+			currencies: getCurrencies(page, this.state.perPage),
+			page
 		});
 	}
 
-	render() {
-		const { currencies, loading, error, page, totalPages, perPage } = this.state;
+	handleChangeRowsPerPage = (e) => {
+		this.setState({
+			currencies: getCurrencies(this.state.page, e.target.value),
+			perPage: e.target.value
+		})
+	}
+
+	render = () => {
+		const { currencies, loading, error, page, perPage } = this.state;
 
 		// Render only loading component, if it's set to true
 		if (loading) {
-			return <div className='loading-container'><Loading /></div>
+			return <Loading />
 		}
 
 		// Render only error message, if error occured while fetching data
@@ -71,9 +71,9 @@ class List extends React.Component {
 				<Pagination
 					page={page}
 					rowsPerPage={perPage}
-					totalPages={totalPages}
-					totalItems={currencies.length}
+					totalItems={getAllCurrencies().length}
 					handlePaginationClick={this.handlePaginationClick}
+					handleChangeRowsPerPage={this.handleChangeRowsPerPage}
 				/>
 			</div>
 		);

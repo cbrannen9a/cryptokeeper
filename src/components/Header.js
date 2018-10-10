@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import SearchIcon from '@material-ui/icons/Search';
 import { routes } from '../constants/routes';
 
+
 const styles = theme => ({
 	flex: {
 		flexGrow: 1,
@@ -60,7 +61,17 @@ const styles = theme => ({
 });
 
 class Header extends Component {
-	render() {
+	state = {
+		search: ''
+	}
+
+	updateSearch = (text) => {
+		this.setState({
+			search: text
+		})
+	}
+
+	render = () => {
 		const { classes, history } = this.props;
 
 		return (
@@ -75,6 +86,8 @@ class Header extends Component {
 						</div>
 						<InputBase
 							placeholder='Search…'
+							value={this.state.search}
+							onChange={e => this.updateSearch(e.target.value)}
 							classes={{
 								root: classes.inputRoot,
 								input: classes.inputInput,

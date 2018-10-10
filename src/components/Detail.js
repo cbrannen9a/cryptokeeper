@@ -36,7 +36,7 @@ class Detail extends Component {
 		}
 	}
 
-	componentWillMount() {
+	componentWillMount = () => {
 		// Get id from url params
 		const currencyId = this.props.match.params.id;
 
@@ -44,7 +44,7 @@ class Detail extends Component {
 		this.fetchCurrency(currencyId);
 	}
 
-	componentWillReceiveProps(nextProps) {
+	componentWillReceiveProps = (nextProps) => {
 		if (this.props.location.pathname !== nextProps.location.pathname) {
 			// Get id from new url params
 			const currencyId = nextProps.match.params.id;
@@ -54,7 +54,7 @@ class Detail extends Component {
 		}
 	}
 
-	fetchCurrency(currencyId) {
+	fetchCurrency = (currencyId) => {
 
 		// Set loading to true, while we are fetching data from server
 		this.setState({ loading: true });
@@ -69,7 +69,7 @@ class Detail extends Component {
 
 	}
 
-	render() {
+	render = () => {
 		const { currency, loading, error } = this.state;
 		const { classes, history } = this.props;
 

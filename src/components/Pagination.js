@@ -5,7 +5,7 @@ import TablePagination from '@material-ui/core/TablePagination';
 
 
 const Pagination = (props) => {
-	const { totalItems, page, rowsPerPage, handlePaginationClick } = props;
+	const { totalItems, page, rowsPerPage, handlePaginationClick, handleChangeRowsPerPage } = props;
 
 	return (
 		<TablePagination
@@ -20,7 +20,7 @@ const Pagination = (props) => {
 				'aria-label': 'Next Page',
 			}}
 			onChangePage={handlePaginationClick}
-
+			onChangeRowsPerPage={handleChangeRowsPerPage}
 		/>
 	);
 }
@@ -30,6 +30,7 @@ Pagination.propTypes = {
 	page: PropTypes.number.isRequired,
 	rowsPerPage: PropTypes.number.isRequired,
 	handlePaginationClick: PropTypes.func.isRequired,
+	handleChangeRowsPerPage: PropTypes.func.isRequired
 };
 
 export default Pagination;

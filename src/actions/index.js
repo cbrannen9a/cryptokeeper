@@ -21,10 +21,19 @@ const rows = [
 	createData('Oreo', 437, 18.0, 44, 5.6, '$', 324, 4324455),
 ];
 
-export const getCurrencies = () => {
+export const getAllCurrencies = () => {
 	return rows;
+}
+
+export const getCurrencies = (page, numToReturn) => {
+	let start = (page) * numToReturn;
+	return rows.slice((start ? start : 0), ((page + 1) * numToReturn));
 }
 
 export const getCurrency = (id) => {
 	return rows.filter(r => r.id === parseInt(id, 10))[0]
+}
+
+export const getFiltered = (text) => {
+	return rows.filter(r => r.name.toLowerCase().includes(text))
 }
