@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 import Header from './Header';
 import Detail from './Detail';
 import List from './List';
 import NotFound from './NotFound';
+
+import { routes } from '../constants/routes';
 
 class App extends Component {
 	render() {
@@ -14,8 +16,9 @@ class App extends Component {
 					<Header />
 
 					<Switch>
-						<Route exact path='/' component={List} />
-						<Route exact path='/currency/:id' component={Detail} />
+						<Route exact path={routes.HOME} component={List} />
+						<Redirect from={routes.BASE} to={routes.HOME} />
+						<Route exact path={routes.DETAIL} component={Detail} />
 						<Route component={NotFound} />
 					</Switch>
 				</div>

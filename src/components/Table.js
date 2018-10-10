@@ -42,7 +42,7 @@ const CurrencyTable = (props) => {
 					{currencies.map(currency =>
 						<TableRow
 							key={currency.id}
-							onClick={() => history.push(`/currency/${currency.id}`)}
+							onClick={() => history.push(`/cryptokeeper/currency/${currency.id}`)}
 						>
 							<TableCell component='th' scope='row'>
 								{currency.name}
